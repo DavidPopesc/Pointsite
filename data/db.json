@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": "2",
+      "username": "David",
+      "password": "DavidsPassword",
+      "privilege": "admin"
+    },
+    {
+      "id": "3",
+      "username": "Bob",
+      "password": "BobsPassword"
+    },
+    {
+      "id": "4",
+      "username": "Bobby",
+      "password": "BobbyPassword"
+    }
+  ],
+  "transactions": [
+    {
+      "from": "David",
+      "to": "Bobby",
+      "amount": 1,
+      "type": "transfer",
+      "reason": "a",
+      "timestamp": "2025-02-07T21:54:15.320Z"
+    }
+  ]
+}
