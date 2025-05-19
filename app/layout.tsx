@@ -17,11 +17,21 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "PointSite",
   description: "Your points banking system",
+  manifest: "/manifest.json",
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
+  themeColor: "#2563eb",
+  viewport: "width=device-width, initial-scale=1, viewport-fit=cover",
+  appleWebApp: {
+    capable: true,
+    title: "Points",
+    statusBarStyle: "default"
+  }
 };
+
+
 
 export default function RootLayout({
   children,
