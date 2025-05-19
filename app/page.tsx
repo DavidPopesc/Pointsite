@@ -1,3 +1,4 @@
+// app/page.tsx
 "use client"; // Required for useRouter
 
 import { useRouter } from "next/navigation";

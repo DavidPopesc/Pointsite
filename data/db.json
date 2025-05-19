@@ -25,6 +25,13 @@
       "type": "transfer",
       "reason": "a",
       "timestamp": "2025-02-07T21:54:15.320Z"
+    },
+    {
+      "to": "David",
+      "amount": 5,
+      "type": "Credit",
+      "reason": "Test",
+      "timestamp": "2025-05-19T02:01:31.500Z"
     }
   ]
 }
