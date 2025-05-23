@@ -7,7 +7,7 @@ export default function Head() {
       <meta name="theme-color" content="#2563eb" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Points" />
+      <meta name="apple-mobile-web-app-title" content="PointSite" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     </>
   );

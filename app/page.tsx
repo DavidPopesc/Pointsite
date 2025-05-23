@@ -1,17 +1,20 @@
 // app/page.tsx
-"use client"; // Required for useRouter
+"use client";
 
+import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
-export default function LoginButton() {
+export default function HomePageRedirect() {
   const router = useRouter();
 
-  return (
-    <button 
-      onClick={() => router.push("/login")}
-      className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-    >
-       Login
-    </button>
-  );
+  useEffect(() => {
+    const user = localStorage.getItem("user");
+    if (user) {
+      router.replace("/dashboard");
+    } else {
+      router.replace("/login");
+    }
+  }, [router]);
+
+  return null; // Nothing visible while redirecting
 }
