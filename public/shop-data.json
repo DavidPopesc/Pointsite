@@ -1,0 +1,260 @@
+{
+  "items": [
+
+    {
+      "id": "1",
+      "name": "Coffee Mug",
+      "description": "Custom PointSite mug",
+      "image": "/images/mug.png",
+      "price": 50
+    },
+    {
+      "id": "2",
+      "name": "Sticker Pack",
+      "description": "5-pack of PointSite stickers",
+      "image": "/images/stickers.png",
+      "price": 20
+    }
+    ,
+    {
+      "id": "3",
+      "name": "T-Shirt",
+      "description": "PointSite branded t-shirt",
+      "image": "/images/tshirt.png",
+      "price": 30
+    },
+    {
+      "id": "4",
+      "name": "Hoodie",
+      "description": "PointSite branded hoodie",
+      "image": "/images/hoodie.png",
+      "price": 60
+    }
+    ,
+    {
+      "id": "5",
+      "name": "Cap",
+      "description": "PointSite branded cap",
+      "image": "/images/cap.png",
+      "price": 25
+    }
+    ,
+    {
+      "id": "6",
+      "name": "Water Bottle",
+      "description": "PointSite branded water bottle",
+      "image": "/images/water-bottle.png",
+      "price": 15
+    }
+    ,
+    {
+      "id": "7",
+      "name": "Notebook",
+      "description": "PointSite branded notebook",
+      "image": "/images/notebook.png",
+      "price": 10
+    }
+    ,
+    {
+      "id": "8",
+      "name": "Mouse Pad",
+      "description": "PointSite branded mouse pad",
+      "image": "/images/mouse-pad.png",
+      "price": 12
+    }
+    ,
+    {
+      "id": "9",
+      "name": "Phone Case",
+      "description": "PointSite branded phone case",
+      "image": "/images/phone-case.png",
+      "price": 18
+    }
+    ,
+    {
+      "id": "10",
+      "name": "Backpack",
+      "description": "PointSite branded backpack",
+      "image": "/images/backpack.png",
+      "price": 40
+    }
+    ,
+    {
+      "id": "11",
+      "name": "Keychain",
+      "description": "PointSite branded keychain",
+      "image": "/images/keychain.png",
+      "price": 8
+    }
+    ,
+    {
+      "id": "12",
+      "name": "Poster",
+      "description": "PointSite branded poster",
+      "image": "/images/poster.png",
+      "price": 5
+    }
+    ,
+    {
+      "id": "13",
+      "name": "Socks",
+      "description": "PointSite branded socks",
+      "image": "/images/socks.png",
+      "price": 15
+    }
+    ,
+    {
+      "id": "14",
+      "name": "Umbrella",
+      "description": "PointSite branded umbrella",
+      "image": "/images/umbrella.png",
+      "price": 20
+    }
+    ,
+    {
+      "id": "15",
+      "name": "Laptop Sleeve",
+      "description": "PointSite branded laptop sleeve",
+      "image": "/images/laptop-sleeve.png",
+      "price": 35
+    }
+    ,
+    {
+      "id": "16",
+      "name": "Travel Mug",
+      "description": "PointSite branded travel mug",
+      "image": "/images/travel-mug.png",
+      "price": 22
+    }
+    ,
+    {
+      "id": "17",
+      "name": "Beach Towel",
+      "description": "PointSite branded beach towel",
+      "image": "/images/beach-towel.png",
+      "price": 28
+    }
+    ,
+    {
+      "id": "18",
+      "name": "Yoga Mat",
+      "description": "PointSite branded yoga mat",
+      "image": "/images/yoga-mat.png",
+      "price": 45
+    } 
+    ,
+    {
+      "id": "19",
+      "name": "Wall Clock",
+      "description": "PointSite branded wall clock",
+      "image": "/images/wall-clock.png",
+      "price": 30
+    }
+    ,
+    {
+      "id": "20",
+      "name": "Desk Organizer",
+      "description": "PointSite branded desk organizer",
+      "image": "/images/desk-organizer.png",
+      "price": 25
+    }
+    ,
+    {
+      "id": "21",
+      "name": "Wireless Charger",
+      "description": "PointSite branded wireless charger",
+      "image": "/images/wireless-charger.png",
+      "price": 50
+    }
+    ,
+    {
+      "id": "22",
+      "name": "Bluetooth Speaker",
+      "description": "PointSite branded Bluetooth speaker",
+      "image": "/images/bluetooth-speaker.png",
+      "price": 70
+    }
+    ,
+    {
+      "id": "23",
+      "name": "Smartwatch",
+      "description": "PointSite branded smartwatch",
+      "image": "/images/smartwatch.png",
+      "price": 150
+    }
+    ,
+    {
+      "id": "24",
+      "name": "Fitness Tracker",
+      "description": "PointSite branded fitness tracker",
+      "image": "/images/fitness-tracker.png",
+      "price": 100
+    }
+    ,
+    {
+      "id": "25",
+      "name": "VR Headset",
+      "description": "PointSite branded VR headset",
+      "image": "/images/vr-headset.png",
+      "price": 200
+    }
+    ,
+    {
+      "id": "26",
+      "name": "Gaming Mouse",
+      "description": "PointSite branded gaming mouse",
+      "image": "/images/gaming-mouse.png",
+      "price": 60
+    }
+    ,
+    {
+      "id": "27",
+      "name": "Gaming Keyboard",
+      "description": "PointSite branded gaming keyboard",
+      "image": "/images/gaming-keyboard.png",
+      "price": 80
+    }
+    ,
+    {
+      "id": "28",
+      "name": "Webcam",
+      "description": "PointSite branded webcam",
+      "image": "/images/webcam.png",
+      "price": 40
+    }
+    ,
+    {
+      "id": "29",
+      "name": "Microphone",
+      "description": "PointSite branded microphone",
+      "image": "/images/microphone.png",
+      "price": 70
+    }
+    ,
+    {
+      "id": "30",
+      "name": "Headphones",
+      "description": "PointSite branded headphones",
+      "price": 90
+    }
+    ,
+    {
+      "id": "31",
+      "name": "Smart Speaker",
+      "description": "PointSite branded smart speaker",
+      "price": 120
+    }
+    ,
+    {
+      "id": "32",
+      "name": "Smart Display",
+      "description": "PointSite branded smart display",
+      "price": 150
+    },
+    {
+      "id": "33",
+      "name": "Smart Thermostat",
+      "description": "PointSite branded smart thermostat"
+    }
+]
+}

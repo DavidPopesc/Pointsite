@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   viewport: "width=device-width, initial-scale=1, viewport-fit=cover",
   appleWebApp: {
     capable: true,
-    title: "Points",
+    title: "PointSite",
     statusBarStyle: "default"
   }
 };
