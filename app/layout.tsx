@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ClientLayout from "./ClientLayout";
+import SidebarWrapper from "@/components/SidebarWrapper"; // new component
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +23,6 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
-  themeColor: "#2563eb",
   viewport: "width=device-width, initial-scale=1, viewport-fit=cover",
   appleWebApp: {
     capable: true,
@@ -31,8 +31,6 @@ export const metadata: Metadata = {
   }
 };
 
-
-
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -40,7 +38,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ClientLayout>
-          {children}
+          <SidebarWrapper>{children}</SidebarWrapper>
         </ClientLayout>
       </body>
     </html>

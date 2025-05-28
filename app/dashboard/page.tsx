@@ -194,6 +194,63 @@ export default function DashboardPage() {
       </div>
 
       {/* Remaining transaction history and modal code remains unchanged */}
+            <h2 className="text-xl font-semibold mt-6 text-center">Transaction History</h2>
+      <div className="bg-gray-100 rounded-md shadow-md max-h-72 overflow-y-auto">
+        <div className="p-2">
+          <table className="w-full text-left border-collapse">
+            <thead className="sticky -top-1 w-full bg-gray-100 border-b-2 border-gray-300">
+              <tr className="sticky top-0 bg-gray-100 border-b-2 border-gray-500">
+                <th className="p-2">Date</th>
+                <th className="p-2">Type</th>
+                <th className="p-2">Amount</th>
+                <th className="p-2">Memo</th>
+              </tr>
+            </thead>
+            <tbody>
+              {transactions.length > 0 ? (
+                transactions.slice().reverse().map((tx, index) => {
+                  let transactionType = "";
+                  let transactionColor = "";
+                  let transactionDetail = "";
+
+                  if (tx.type === "Credit") {
+                    transactionType = "Credit";
+                    transactionColor = "text-yellow-600 font-semibold";
+                    transactionDetail = `${tx.reason || "No reason"}`;
+                  } else if (tx.to === username) {
+                    transactionType = "Received";
+                    transactionColor = "text-green-600 font-semibold";
+                    transactionDetail = `From ${tx.from || "Unknown"}${tx.reason ? ", \"" + tx.reason + "\"" : ""}`;
+                  } else if (tx.from === username) {
+                    transactionType = "Sent";
+                    transactionColor = "text-red-600 font-semibold";
+                    transactionDetail = `To ${tx.to || "Unknown"}${tx.reason ? ", \"" + tx.reason + "\"" : ""}`;
+                  } else if (tx.type === "debit") {
+                    transactionType = "Withdrawal";
+                    transactionColor = "text-red-600 font-semibold";
+                  } else {
+                    transactionType = "Unknown";
+                    transactionColor = "text-gray-600";
+                  }
+
+                  return (
+                    <tr key={index} className="border-b">
+                      <td className="p-2">{new Date(tx.timestamp).toLocaleString()}</td>
+                      <td className={`p-2 ${transactionColor}`}>{transactionType}</td>
+                      <td className="p-2">{tx.amount} points</td>
+                      <td className="p-2">{transactionDetail}</td>
+                    </tr>
+                  );
+                })
+              ) : (
+                <tr>
+                  <td className="p-2 text-center" colSpan={4}>No transactions found.</td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   );
 }
