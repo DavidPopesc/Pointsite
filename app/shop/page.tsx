@@ -14,6 +14,13 @@ interface Item {
 
 export default function ShopPage() {
   const [items, setItems] = useState<Item[]>([]);
+  const [showModal, setShowModal] = useState(false);
+  const [newItem, setNewItem] = useState({
+    name: "",
+    description: "",
+    price: 0,
+    image: "",
+  });
 
   useEffect(() => {
     fetch("/shop-data.json")
@@ -24,12 +31,30 @@ export default function ShopPage() {
 
   const handleBuy = (item: Item) => {
     alert(`You bought ${item.name} for ${item.price} points!`);
-    // Implement actual purchase logic here
+  };
+
+  const handleAddItem = () => {
+    const itemToAdd: Item = {
+      id: Date.now().toString(),
+      ...newItem,
+    };
+    setItems([...items, itemToAdd]);
+    setShowModal(false);
+    setNewItem({ name: "", description: "", price: 0, image: "" });
   };
 
   return (
     <div className="p-6 max-w-4xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4 text-center">Shop</h1>
+      <div className="flex justify-between items-center mb-4">
+        <h1 className="text-2xl font-bold">Shop</h1>
+        <button
+          onClick={() => setShowModal(true)}
+          className="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600"
+        >
+          Add Item
+        </button>
+      </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {items.map((item) => (
           <div
@@ -57,6 +82,56 @@ export default function ShopPage() {
           </div>
         ))}
       </div>
+
+      {showModal && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-6 rounded shadow-md w-full max-w-md">
+            <h2 className="text-xl font-bold mb-4">Add New Item</h2>
+            <input
+              type="text"
+              placeholder="Title"
+              value={newItem.name}
+              onChange={(e) => setNewItem({ ...newItem, name: e.target.value })}
+              className="border p-2 rounded w-full mb-2"
+            />
+            <input
+              type="text"
+              placeholder="Description"
+              value={newItem.description}
+              onChange={(e) => setNewItem({ ...newItem, description: e.target.value })}
+              className="border p-2 rounded w-full mb-2"
+            />
+            <input
+              type="number"
+              placeholder="Price"
+              value={newItem.price}
+              onChange={(e) => setNewItem({ ...newItem, price: Number(e.target.value) })}
+              className="border p-2 rounded w-full mb-2"
+            />
+            <input
+              type="text"
+              placeholder="Image URL"
+              value={newItem.image}
+              onChange={(e) => setNewItem({ ...newItem, image: e.target.value })}
+              className="border p-2 rounded w-full mb-4"
+            />
+            <div className="flex justify-end gap-2">
+              <button
+                onClick={() => setShowModal(false)}
+                className="px-4 py-2 bg-gray-400 text-white rounded"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleAddItem}
+                className="px-4 py-2 bg-blue-600 text-white rounded"
+              >
+                Add
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
